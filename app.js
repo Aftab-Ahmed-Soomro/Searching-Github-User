@@ -9,7 +9,7 @@ const searchProfile = () => {
     .then((data)=>{
         console.log(data);
         let filteredData = data.filter((val)=>{
-            return val.username == input.value;
+            return val.username.toLowerCase() == input.value.toLowerCase();
         })
         filteredData.forEach((value)=> {
             main.innerHTML = `
